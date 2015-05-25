@@ -1,1 +1,22 @@
-#main-nav { text-transform:uppercase; background:transparent; border:0;  }
+#main-nav {
+  text-transform:uppercase; background:transparent; border:0; font-weight:bold; font-size:14px; font-family: "Helvetica", sans-serif; margin-bottom:0;
+  .navbar-brand {
+    float:none; margin:auto; display:block; height:auto;
+    > img { margin:auto; }
+  }
+
+  button.navbar-toggle { display:block; margin:auto; margin-bottom:10px; float:none; }
+
+  .navbar-nav {
+    opacity:0.8;
+    li:last-child a { padding-right:0; }
+  }
+}
+
+@media (min-width: $screen-sm-min) {
+  // Only float if not on an extra small device
+  #main-nav {
+    button.navbar-toggle { display:none; }
+    .navbar-nav { margin-top:32px; }
+  }
+}
