@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:600italic,700italic,700,600,400);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:600italic,700italic,700,600,400,300,300italic);
 
 // Glyphicons font path
 $icon-font-path:        "../fonts/";
@@ -9,7 +9,14 @@ $sidebar-sm-columns:    4;
 
 // Colors
 $green: rgb(0, 148, 122);
-$gray-light:           rgb(66, 66, 66);
+
+$gray-base:              #000;
+$gray-darker:            lighten($gray-base, 13.5%) !default; // #222
+$gray-dark:              lighten($gray-base, 20%) !default;   // #333
+$gray:                   lighten($gray-base, 33.5%) !default; // #555
+$gray-light:             rgb(66, 66, 66);
+$gray-lighter:           rgb(230, 227, 227); // #eee
+
 $brand-primary:         $green;
 
 $navbar-default-color:  $gray-light;
@@ -26,9 +33,9 @@ $font-size-base:          14px !default;
 // $font-size-large:         ceil(($font-size-base * 1.25)) !default; // ~18px
 // $font-size-small:         ceil(($font-size-base * 0.85)) !default; // ~12px
 
-// $font-size-h1:            floor(($font-size-base * 2.6)) !default; // ~36px
-// $font-size-h2:            floor(($font-size-base * 2.15)) !default; // ~30px
-// $font-size-h3:            ceil(($font-size-base * 1.7)) !default; // ~24px
+$font-size-h1:            30px;
+$font-size-h2:            24px;
+$font-size-h3:            22px;
 // $font-size-h4:            ceil(($font-size-base * 1.25)) !default; // ~18px
 // $font-size-h5:            $font-size-base !default;
 // $font-size-h6:            ceil(($font-size-base * 0.85)) !default; // ~12px
@@ -103,3 +110,12 @@ $container-md:                 $container-desktop !default;
 $container-large-desktop:      (1170px + $grid-gutter-width);
 //** For `$screen-lg-min` and up.
 $container-lg:                 $container-large-desktop !default;
+
+
+//== Buttons
+//
+//## For each of Bootstrap's buttons, define text, background and border color.
+
+$btn-default-color:              $brand-primary;
+$btn-default-bg:                 $gray-lighter;
+$btn-default-border:             rgba(0,0,0,0.1);

@@ -1,0 +1,36 @@
+article.post {
+  font-size:18px;
+  header {
+    margin:20px 0;
+    time.updated { text-transform:uppercase; font-size:$font-size-base; }
+    .entry-title {
+      margin:0;
+      a { color:inherit; }
+      .entry-subtitle { font-size:21px; font-weight:normal; font-style:italic; text-transform:none; }
+    }
+
+    #share_buttons {
+      margin-top:20px;
+      a {
+        width:20%;position:relative;border:1px solid white;
+        span.a2a_svg{background-repeat:no-repeat;border-radius:0;float:none;margin:auto;}
+        span.a2a_count{
+          display:none;
+          &:before,
+          &:after{display:none;}
+        }
+        &.a2a_button_facebook{background-color:#3B5998;}
+        &.a2a_button_twitter{background-color:#55ACEE;}
+        &.a2a_button_linkedin{background-color:#007BB5;}
+        &.a2a_button_email,
+        &.a2a_button_print{background-color:#0166FF;}
+      }
+    }
+  }
+
+  .read-more { @extend .btn; @extend .btn-default; @extend .btn-block; @extend p; margin-top:10px; }
+}
+
+aside.sidebar {
+  margin:20px 0;
+}
