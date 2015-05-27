@@ -4,7 +4,8 @@
       <div class="container-fluid">
         <div class="row">
           <div class="navbar-header col-md-4">
-            <a class="navbar-brand" href="<?= esc_url(home_url('/')); ?>">
+            <!-- <a class="navbar-brand" href="<?= esc_url(home_url('/')); ?>"> -->
+            <a class="navbar-brand" href="https://mavericksdu.com">
               <img src="<?php echo Roots\Sage\Assets\asset_path('images/logo.png') ?>" width="278" height="70" alt="<?php bloginfo('name'); ?>" />
             </a>
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-nav-collapse">
