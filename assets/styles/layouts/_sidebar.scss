@@ -1,1 +1,10 @@
-.widget_search .input-group { width:100%; }
+aside.sidebar {
+  section.widget {
+    border-bottom: 1px solid black; padding-bottom:10px;
+    &:last-child { border-bottom:0; }
+    &.widget_search {
+      border-bottom:0;
+      .input-group { width:100%; }
+    }
+  }
+}

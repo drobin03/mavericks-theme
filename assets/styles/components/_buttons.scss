@@ -1,1 +1,3 @@
 .btn { text-transform:uppercase; font-weight:bold; }
+
+.read-more { @extend .btn; @extend .btn-default; @extend .btn-block; @extend p; margin-top:10px; }
