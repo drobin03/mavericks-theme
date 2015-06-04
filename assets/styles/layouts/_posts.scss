@@ -27,6 +27,11 @@ article.post {
       }
     }
   }
+
+  .featured-image {
+    @extend p;
+    img { @extend .img-responsive; }
+  }
 }
 
 aside.sidebar {

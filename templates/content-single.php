@@ -5,7 +5,7 @@
       <?php get_template_part('templates/social-share-bar'); ?>
     </header>
     <div class="entry-content">
-      <?php the_post_thumbnail(); ?>
+      <section class="featured-image"><?php the_post_thumbnail(); ?></section>
       <?php the_content(); ?>
     </div>
     <footer>
