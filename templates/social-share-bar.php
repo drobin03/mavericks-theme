@@ -15,5 +15,6 @@ a2a_config.templates = {
         body: "Hey,\n\nI wanted to share this post from the Mavericks with you.\n\n${link}\n\nThanks!"
     }
 };
+a2a.init('page');
 </script>
 <script type="text/javascript" src="//static.addtoany.com/menu/page.js"></script>
