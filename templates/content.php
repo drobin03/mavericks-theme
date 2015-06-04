@@ -5,6 +5,7 @@
     <?php get_template_part('templates/social-share-bar'); ?>
   </header>
   <div class="entry-summary">
+    <?php the_post_thumbnail(); ?>
     <?php the_excerpt(); ?>
   </div>
 </article>
