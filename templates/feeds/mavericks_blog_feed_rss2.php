@@ -89,9 +89,6 @@ do_action( 'rss_tag_pre', 'rss2' );
     <?php the_category_rss('rss2') ?>
 
     <guid isPermaLink="false"><?php the_guid(); ?></guid>
-<?php echo "EXCERPT:"; ?>
-<?php echo get_option('rss_use_excerpt'); ?>
-<?php echo ":EXCERPT"; ?>
 <?php if (get_option('rss_use_excerpt')) : ?>
     <description><![CDATA[<?php the_excerpt_rss(); ?>]]></description>
 <?php else : ?>
