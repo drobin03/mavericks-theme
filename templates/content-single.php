@@ -9,6 +9,8 @@
       <?php the_content(); ?>
     </div>
     <footer>
+      <?php get_template_part('templates/social-share-bar'); ?>
+      <p class="links"><a href="https://mavericksdu.com/about" target="_blank">About the Author</a></p>
       <?php wp_link_pages(['before' => '<nav class="page-nav"><p>' . __('Pages:', 'sage'), 'after' => '</p></nav>']); ?>
     </footer>
     <?php comments_template('/templates/comments.php'); ?>

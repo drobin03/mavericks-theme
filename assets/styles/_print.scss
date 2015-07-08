@@ -1,0 +1,9 @@
+@media print {
+  body {
+    background:blue; color:red; margin:0;
+    p { color:blue; }
+  }
+  header.banner,
+  .share_buttons,
+  aside.sidebar { display:none; }
+}
