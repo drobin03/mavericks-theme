@@ -2,4 +2,8 @@ body { -webkit-font-smoothing: antialiased; }
 
 h1,h2 { text-transform:uppercase; font-weight:bold; }
 
-p { margin:0 0 1.5em; }
+.main {
+  ol,
+  ul,
+  p {  margin-bottom:1.5em; }
+}
