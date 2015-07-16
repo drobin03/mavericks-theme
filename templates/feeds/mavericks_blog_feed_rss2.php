@@ -81,7 +81,7 @@ do_action( 'rss_tag_pre', 'rss2' );
   while( have_posts()) : the_post();
   ?>
   <item>
-    <title><?php the_title_rss() ?>: <?php the_subtitle() ?></title>
+    <title><?php the_title_rss() ?></title>
     <link><?php the_permalink_rss() ?></link>
     <comments><?php comments_link_feed(); ?></comments>
     <pubDate><?php echo mysql2date('D, d M Y H:i:s +0000', get_post_time('Y-m-d H:i:s', true), false); ?></pubDate>
@@ -90,12 +90,21 @@ do_action( 'rss_tag_pre', 'rss2' );
 
     <guid isPermaLink="false"><?php the_guid(); ?></guid>
 <?php if (get_option('rss_use_excerpt')) : ?>
-    <description><![CDATA[<?php the_excerpt_rss(); ?>]]></description>
+    <description><![CDATA[
+    <h4><em><?php the_subtitle() ?></em></h4>
+    <?php the_excerpt_rss(); ?>
+    ]]></description>
 <?php else : ?>
-    <description><![CDATA[<?php the_excerpt_rss(); ?>]]></description>
+    <description><![CDATA[
+    <h4><em><?php the_subtitle() ?></em></h4>
+    <?php the_excerpt_rss(); ?>
+    ]]></description>
   <?php $content = get_the_content_feed('rss2'); ?>
   <?php if ( strlen( $content ) > 0 ) : ?>
-    <content:encoded><![CDATA[<?php echo $content; ?>]]></content:encoded>
+    <content:encoded><![CDATA[
+    <h4><em><?php the_subtitle() ?></em></h4>
+    <?php echo $content; ?>
+    ]]></content:encoded>
   <?php else : ?>
     <content:encoded><![CDATA[<?php the_excerpt_rss(); ?>]]></content:encoded>
   <?php endif; ?>
