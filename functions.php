@@ -39,3 +39,12 @@ function mavericks_blog_feed_rss2( $for_comments ) {
     // else
         // do_feed_rss2( $for_comments ); // Call default function
 }
+
+add_shortcode( 'button', 'button_shortcode_handler');
+function button_shortcode_handler( $atts, $content = null ) {
+  $a = shortcode_atts( array(
+    'url' => 'javascript:void();',
+  ), $atts );
+  $url = $a["url"];
+  return '<a href="' . esc_attr($url) . '" class="btn btn-default" target="_blank">' . $content . '</a>';
+}
