@@ -1,0 +1,7 @@
+html.embedded {
+  margin-top:0!important;
+  @media (min-width: $screen-sm-min) {
+    .alignleft { float:left; margin-right: 10px; }
+    .alignright { float:right; margin-right: 10px; }
+  }
+}
