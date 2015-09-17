@@ -19,9 +19,7 @@ use Roots\Sage\Wrapper;
       get_template_part('templates/header');
     ?>
     <?php if(is_front_page()): ?>
-      <div class="wrap container" role="document">
-        <iframe src='https://deliberateu.clickfunnels.com/optin5843661' width='100%' height='250' frameborder='0'></iframe>
-      </div>
+      <iframe src='https://deliberateu.clickfunnels.com/optin5843661' width='100%' height='250' frameborder='0'></iframe>
     <?php endif; ?>
     <div class="wrap container" role="document">
       <div class="content row">
