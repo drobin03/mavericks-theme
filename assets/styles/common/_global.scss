@@ -6,4 +6,8 @@ h1,h2 { font-weight:bold; }
   ol,
   ul,
   p {  margin-bottom:1.5em; }
+
+  ol, ul {
+    ol, ul { margin-bottom:0; }
+  }
 }
