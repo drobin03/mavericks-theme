@@ -35,9 +35,15 @@ add_action( 'do_feed_rss2', 'mavericks_blog_feed_rss2', 10, 1 );
 function mavericks_blog_feed_rss2( $for_comments ) {
     $rss_template = get_template_directory() . '/templates/feeds/mavericks_blog_feed_rss2.php';
     // if( get_query_var( 'post_type' ) == 'acme_product' and file_exists( $rss_template ) )
+    add_filter('the_content_feed', 'remove_img_height_attributes');
     load_template( $rss_template );
     // else
         // do_feed_rss2( $for_comments ); // Call default function
+}
+
+function remove_img_height_attributes( $html ) {
+   $html = preg_replace( '/(height)="\d*"\s/', "", $html );
+   return $html;
 }
 
 add_shortcode( 'button', 'button_shortcode_handler');
